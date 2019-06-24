@@ -1,0 +1,45 @@
+<ion-header>
+  <div class="logo_gmac"></div>
+  <div class="cabecera">
+    <!-- <span> -->
+        
+      <ion-buttons slot="start" class="btn_volver">
+          <ion-back-button  text="&#8701; Volver" defaultHref="/menu"></ion-back-button>
+      </ion-buttons>
+    <!-- </span> -->
+  PLATAFORMA VIRTUAL DE ATENCIÓN
+</div>
+</ion-header>
+
+<ion-content>
+  <ion-title class="titulo_deudas">DEUDAS POR CONCEPTO DE:</ion-title>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="3.5">
+          <ion-card routerLink="/consulta-infracciones" routerDirection="forward">
+            <ion-card-header>VEHÍCULOS</ion-card-header>
+            <img src="/assets/car2.png" class=img_deudas>
+            <ion-card-content>
+              <div class="descripcion_menu">INFRACCIONES DE TRÁNSITO</div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      <ion-col size="3.5">
+          <ion-card routerLink="/consulta-sitiosymercados" routerDirection="forward">
+              <ion-card-header>ACTIVIDADES ECONÓMICAS</ion-card-header>
+              <img src="/assets/store.png" class="img_deudas">
+              <ion-card-content>
+                  <div class="descripcion_menu">CONSULTA DE DEUDAS  DE SITIOS Y MERCADOS</div>
+              </ion-card-content>
+          </ion-card>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+    <div class="pie_menu">Plataforma Virtual de Atención</div>
+  </ion-toolbar>
+</ion-footer>

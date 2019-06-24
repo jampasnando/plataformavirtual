@@ -3,9 +3,122 @@
 @import '~@ionic/angular/css/normalize.css';
 @import '~@ionic/angular/css/structure.css';
 @import '~@ionic/angular/css/typography.css';
-@import '~@ionic/angular/css/display.css';
+
 @import '~@ionic/angular/css/padding.css';
 @import '~@ionic/angular/css/float-elements.css';
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+ion-header .cabecera{
+    text-align: center;
+    background:lightseagreen;
+    color:white;
+    padding: 10px 0;
+    font-size: 3vh;
+    font-weight: bold;
+    
+}
+ion-header .logo_gmac{
+    height: 60px;
+    background: white;
+    background-image: url(/assets/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.pie_menu{
+    text-align: center;
+    font-size: 3vh;
+    // font-weight: bold;
+    color: dimgray;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.btn_sugerencias{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 55px;
+    // background: red;
+    padding: 0 !important;
+}
+.btn_sugerencias img{
+    width:48px;
+}
+.btn_sugerencias ion-button{
+    color: white;
+    font-weight: bold;
+}
+.btn_sugerencias ion-col{
+    // background: yellow;
+    padding: 0;
+}
+.dialog-modal{
+    width: 90%;
+}
+.btn_volver{
+    position: absolute;
+    
+    // top: 7vh;
+    // color: white;
+    // font-weight: bold;
+    left: 2em;
+    margin-top: -10px;
+    // padding: 0;
+    // background: yellow;
+    // margin: -10px 0 0 -5px !important;
+    
+}
+.btn_volver ion-back-button{
+    font-size: 1em;
+    // left:2em;
+    color: white;
+    line-height: 1em;
+}
+
+div[role=dialog]{
+    width: 85% !important;
+}
+.datos_deudor{
+    width: 100%;
+    // background: yellow;
+}
+.titulodesc{
+    text-align: center;
+    font-size: 1.2em;
+    color: darkslategray;
+    // font-weight: bold;
+    // background: yellow;
+    // height: 3em;
+}
+.nrodesc{
+    background:lightblue;
+    color: navy;
+    border-radius: 50%;
+    // padding:0.3em 0.5em;
+    margin: 0 5px;
+    padding: 0 4px 0 4px;
+    // height: 2em ;
+    // font-weight: bold;
+    font-size: 1.2em;
+    border: 1px solid white;
+}
+.pideflujograma{
+    text-align: center;
+    background: lightblue;
+    color: navy;
+    
+}
+.popover-content{
+    background: lightblue!important;
+}

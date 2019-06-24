@@ -1,0 +1,43 @@
+<ion-header>
+
+  <div class="logo_gmac"></div>
+  <div class="cabecera">
+    <span>
+        <ion-buttons slot="start" class="btn_volver">
+            <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+            </ion-back-button>
+        </ion-buttons>
+    </span>
+    PLATAFORMA VIRTUAL DE ATENCIÓN
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item routerLink="/sub-alc">
+      <ion-img src="assets/imgs/alc.png" lines="none"></ion-img>
+      <div class="fondo-item">
+      <ion-label>SUB ALCALDÍAS Y CATASTRO</ion-label>
+    </div>
+    </ion-item>
+    <ion-item routerLink="/catastro">
+        <ion-img src="assets/imgs/cat.png"lines="none"></ion-img>
+        <div class="fondo-item">
+        <ion-label>CATASTRO</ion-label>
+      </div>
+      </ion-item>
+      <ion-item routerLink="/leymunicipal">
+          <ion-img src="assets/imgs/ley.png"lines="none"></ion-img>
+          <div class="fondo-item">
+          <ion-label>LEY MUNICIPAL</ion-label>
+        </div>
+        </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+    <div class="pie_menu">Plataforma Virtual de Atención</div>
+    <!-- <ion-title>Footer</ion-title> -->
+
+  </ion-toolbar>
+</ion-footer>

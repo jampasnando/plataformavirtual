@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-buttons class="btn_cerrarmodal">
+        <ion-button (click)="closeModal()" size="large" color="light">
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  <div class="cabecera">
+    RESULTADO DE LA BÚSQUEDA
+    
+  </div>
+</ion-header>
+<ion-content [scrollEvents]="true">
+
+<ion-item > 
+  <ion-label class="gestion_y_nro">Codigo de Licencia: <span class="mayusculas">{{this.father.sitiosForm.value.codLicencia}}</span></ion-label>
+</ion-item>
+
+<ion-item *ngIf="param1[0].deuda=='Codigo inexistente o dado de baja!!'">
+  <ion-label text-wrap color="danger">
+    <ion-icon name="alert"></ion-icon>
+    {{param1[0].deuda}}
+  </ion-label>
+</ion-item>
+<ion-grid *ngIf="param1[0].deuda!='Codigo inexistente o dado de baja!!'"> 
+  <ion-row  class="opaco" >
+    <ion-col>
+        <strong>RAZÓN SOCIAL</strong><br><span>{{param1[0].razon_social}}</span>
+    </ion-col>
+    <ion-col>
+        <strong>ACTIVIDAD</strong><br><span>{{param1[0].actividad}}</span>
+    </ion-col>
+  </ion-row >
+  <ion-row  class="opaco">
+    <ion-col>
+      <strong>DIRECCIÓN</strong><br><span>{{param1[0].direccion}}</span>
+    </ion-col>
+    <ion-col>
+      <strong>SUPERFICIE</strong><br><span>{{param1[0].superficie}}</span>
+    </ion-col>
+  </ion-row>
+  <ion-row class="opaco">
+      <ion-col>
+        <strong>SINDICATO</strong><br><span>{{param1[0].sindicato}}</span>
+      </ion-col>
+      <ion-col>
+        <strong>TIPO</strong><br><span>{{param1[0].tipo}}</span>
+      </ion-col>
+  </ion-row>
+  
+</ion-grid>
+  <ion-list *ngIf="param1[0].deuda!='Codigo inexistente o dado de baja!!'">
+  <ion-item *ngFor="let param of param1;let i=index">
+        <ion-grid class="lista_deudas">
+            <ion-row *ngIf="i==0">
+                <ion-col><strong>GESTIÓN</strong></ion-col>
+                <ion-col><strong>DEUDA</strong></ion-col>
+                <ion-col><strong>DESCUENTO</strong></ion-col>
+              </ion-row>
+        <ion-row>
+          <ion-col>
+            <span>{{param.gestion}}</span>
+          </ion-col>
+          <ion-col>
+              <span>{{param.deuda}}</span>
+          </ion-col>
+          <ion-col>
+              <span>{{param.descuento}}</span>
+          </ion-col>
+        </ion-row>
+        </ion-grid>
+  </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+		<ion-buttons class="btn_cerrarmodal">
+        <ion-button (click)="closeModal()" size="large" color="light">
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+  <div class="cabecera">
+    RESULTADO DE LA OPCIÓN SELECCIONADA
+    
+  </div>
+</ion-header>
+<ion-content [scrollEvents]="true">
+  <ion-grid>
+    <ion-row >
+      <ion-col class="colx opaco"  size="3"><strong>NOMBRE</strong></ion-col>
+      <ion-col size="9">{{data.nombre}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="colx opaco"  size="3"><strong>CARGO</strong></ion-col>
+      <ion-col size="9">{{data.cargo}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="colx opaco"  size="3"><strong>UNIDAD</strong></ion-col>
+      <ion-col size="9">{{data.unidad}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

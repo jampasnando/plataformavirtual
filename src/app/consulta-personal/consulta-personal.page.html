@@ -1,0 +1,33 @@
+<ion-header>
+  <div class="logo_gmac"></div>
+  <div class="cabecera">
+    <span>
+        <ion-buttons slot="start" class="btn_volver">
+            <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+            </ion-back-button>
+        </ion-buttons>
+    </span>
+    LISTA DE PERSONAL JERÁRQUICO
+  </div>
+</ion-header>
+<ion-content padding>	
+<!-- <ion-label color="primary" class="subtitulo_tramites">Mediante este buscador Ud. puede buscar personal de la Alcaldía</ion-label><br> -->
+<ion-searchbar (ionChange)="buscar($event)" placeholder="Buscar por oficina..."></ion-searchbar>  
+<ion-list>
+    <ion-item *ngFor="let unreg of vector | filtro:textoBuscar;let i=index" detail  (click)="detalle(unreg)">
+      <ion-icon name="contact" slot="start" color="tertiary"></ion-icon>
+      <ion-label>
+        <ion-text>{{unreg.unidad}}</ion-text>
+        <div class="subt">{{unreg.cargo}}</div>
+      </ion-label>
+      
+    </ion-item>
+</ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+    <div class="pie_menu">Plataforma Virtual de Atención</div>
+    <!-- <ion-title>Footer</ion-title> -->
+    
+  </ion-toolbar>
+</ion-footer>

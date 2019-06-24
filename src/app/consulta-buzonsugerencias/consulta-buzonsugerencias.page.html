@@ -1,0 +1,43 @@
+<ion-header>
+  
+    <div class="logo_gmac"></div>
+    <div class="cabecera">
+      <span>
+          <ion-buttons slot="start" class="btn_volver">
+              <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+              </ion-back-button>
+          </ion-buttons>
+      </span>
+      PLATAFORMA VIRTUAL DE ATENCIÓN
+    </div>
+  </ion-header>
+<ion-content padding>	
+<ion-label color="primary-contrast" class="subtitulo_tramites">Mediante el presente formulario Ud. puede enviar alguna sugerencia:</ion-label><br>
+<ion-card class="card-principal">
+<ion-card-header>
+  FORMULARIO DE SUGERENCIAS
+</ion-card-header>
+<ion-card-content>
+  <ion-label>Nombre:<span class="asteriscorojo">*</span></ion-label>
+  <ion-input></ion-input>
+  <ion-label>Correo Electrónico:<span class="asteriscorojo">*</span></ion-label>
+  <ion-input></ion-input>
+  <ion-label>Escriba su sugerencia aquí:<span class="asteriscorojo">*</span></ion-label>
+  <ion-textarea></ion-textarea>
+    <ion-row style="height: 1em;"></ion-row>
+    <ion-label>Los campos marcados con <span class="asteriscorojo">*</span> son obligatorios</ion-label>
+    <ion-row style="height: 1em;"></ion-row>
+    <ion-button (click)="enviasugerencia()" expand="block" color="tertiary" class="btn_enviar">
+        <ion-icon slot="start" name="mail"></ion-icon>
+        ENVIAR
+    </ion-button>
+  
+</ion-card-content>
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+    <div class="pie_menu">Plataforma Virtual de Atención</div>
+    <!-- <ion-title>Footer</ion-title> -->
+  </ion-toolbar>
+</ion-footer>

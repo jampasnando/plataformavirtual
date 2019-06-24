@@ -1,0 +1,75 @@
+.error_messages{
+	font-size:0.7em;
+	color:red;
+	text-align:center;
+}
+ion-content{
+    --ion-background-color:mediumseagreen;
+}
+ion-card{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	margin: auto;
+	// background: white;
+}
+
+.grid_formu ion-col{
+	background: lightseagreen;
+	margin: 0 10px;
+	padding: 10px 0 0 0;
+}
+.grid_formu ion-row{
+	background: lightseagreen;
+	// margin: 5px;																																																																																																																																																																																
+}
+.grid_formu{
+	background: lightseagreen;
+	padding: 0px 3px 0 20px;
+	border: 1px solid steelblue;
+	border-radius: 35px 35px;
+	overflow: hidden;
+}
+.grid_formu ion-input{
+	background:white;
+	height: 1.5em;
+	font-size: 2em;
+	line-height: 0px;
+	// padding: 0;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.grid_formu ion-select{
+	background:white;
+	height: 1.5em;
+	font-size: 2em;
+	line-height: 0.9em;
+	// padding: 0;
+	text-align: center;
+	font-weight: bold;
+}
+.btn_buscar, .btn_buscar ion-icon{
+	font-weight: bold;
+	font-size: 2em;
+	padding: -5px 0;
+	line-height: 0;
+	margin: 0;
+	height: 50px;
+	// background: yellow;
+}
+
+.grid_titulos ion-col{
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: white;
+}
+.subtitulo_tramites{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: white;
+	font-size: 1.3em;
+}
+

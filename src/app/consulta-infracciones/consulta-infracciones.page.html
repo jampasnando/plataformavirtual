@@ -1,0 +1,42 @@
+<ion-header>
+  <div class="logo_gmac"></div>
+  <div class="cabecera">
+    <span>
+        <ion-buttons slot="start" class="btn_volver">
+            <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+            </ion-back-button>
+        </ion-buttons>
+    </span>
+    INFRACCIONES DE TRÁNSITO MUNICIPAL</div>
+</ion-header>
+<ion-content padding>	
+<ion-label color="primary-contrast" class="subtitulo_tramites">Consulta de Infracciones de Tránsito Municipales</ion-label><br>
+<ion-card class="card-principal">
+<ion-card-header>
+  DATOS BÚSQUEDA
+</ion-card-header>
+<ion-card-content>
+  <form [formGroup]="consultaPTA">
+  <ion-card class="card-interior">
+    <ion-card-header>Placa PTA*</ion-card-header>
+    <ion-card-content class="formu">
+      <ion-input type="text" class="pta" maxlength="7" formControlName="pta"></ion-input>
+      <!-- <ion-buttons> -->
+          <ion-button (click)="getPTA()" expand="block" color="tertiary" class="btn_buscar">
+              <ion-icon slot="start" name="search"></ion-icon>
+              BUSCAR
+          </ion-button>
+      <!-- </ion-buttons> -->
+    </ion-card-content>
+  </ion-card>
+  </form>
+</ion-card-content>
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+    <div class="pie_menu">Plataforma Virtual de Atención</div>
+    <!-- <ion-title>Footer</ion-title> -->
+    
+  </ion-toolbar>
+</ion-footer>

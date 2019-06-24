@@ -1,0 +1,59 @@
+// ion-toolbar ion-title{
+//     background: beige;
+// }
+ion-list ion-list-header{
+    background:dimgray;
+    color: white;
+    // font-weight: bold;
+    padding: 0px 0 0 5px;
+    height: 0.7em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.btn_cerrarmodal{
+    position: absolute;
+    top: 5px;
+    right: -7px;
+    
+}
+.btn_cerrarmodal ion-button{
+    color: white;
+    font-size: 1.5em;
+   
+}
+.opaco{
+    background: whitesmoke;
+}
+ion-col span{
+    font-size: 0.8em;
+    color: gray;
+}
+ion-col strong{
+    color: dimgray;
+    font-size: 0.8em;
+}
+.lista_deudas{
+    text-align: center;
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+ion-grid{
+    width: 40%;
+    margin-top: 20px;
+}
+.colx{
+    // width: 30%;
+    text-align: right;
+}
+ion-searchbar{
+    background: white;
+}
+ion-grid ion-row ion-col:nth-child(2){
+    background: aliceblue;
+}
+ion-content{
+    margin-top: 0 !important;
+}
+

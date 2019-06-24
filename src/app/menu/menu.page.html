@@ -1,0 +1,71 @@
+<ion-header>
+	<div class="logo_gmac"></div>
+	<div class="cabecera">PLATAFORMA VIRTUAL DE ATENCIÓN</div>
+</ion-header>
+
+<ion-content>
+	
+	<ion-grid>
+		<ion-row>
+			
+			<ion-col size="3" >
+					<ion-card routerLink="/menu-deudas" routerDirection="forward">
+							<ion-card-header>DEUDAS / INFRACCIONES</ion-card-header>
+							<img src="/assets/money.png" class="img_deudas">
+							<ion-card-content>
+								<div class="descripcion_menu">INMUBLES VEHÍCULOS LICENCIAS PATENTES</div>
+							</ion-card-content>
+							<!-- <ion-button routerLink="/consulta-tramites" routerDirection="forward" text-wrap>CONSULTA DE TRAMITES</ion-button> -->
+					</ion-card>
+			</ion-col>
+			<ion-col  size="3">
+					<ion-card routerLink="/consulta-tramites" routerDirection="forward">
+						<ion-card-header>TRÁMITES</ion-card-header>
+						<img src="/assets/docus2.png" class="img_deudas">
+						<ion-card-content>
+							<div class="descripcion_menu">CONSULTA TRÁMITES</div>
+						</ion-card-content>
+						<!-- <ion-button routerLink="/consulta-tramites" routerDirection="forward" text-wrap>CONSULTA DE TRAMITES</ion-button> -->
+					</ion-card>
+				</ion-col>
+			<ion-col  size="3">
+					<ion-card routerLink="/xmenu" routerDirection="forward">
+							<ion-card-header>INFO REQUISITOS</ion-card-header>
+							<img src="/assets/checklist2.png" class="img_deudas2">
+							<ion-card-content>
+								<div class="descripcion_menu">SUBALCALDÍAS<br>CATASTRO</div>
+							</ion-card-content>
+							<!-- <ion-button routerLink="/consulta-tramites" routerDirection="forward" text-wrap>CONSULTA DE TRAMITES</ion-button> -->
+					</ion-card>
+			</ion-col>
+			<ion-col  size="3">
+					<ion-card routerLink="/consulta-personal" routerDirection="forward">
+							<ion-card-header>LISTADO PERSONAL</ion-card-header>
+							<img src="/assets/teamwork2.png" id="img_deudas">
+							<ion-card-content>
+								<div class="descripcion_menu">CONSULTA DE PERSONAL DE LA ALCALDÍA Y SU UNIDAD DE TRABAJO</div>
+							</ion-card-content>
+							<!-- <ion-button routerLink="/consulta-tramites" routerDirection="forward" text-wrap>CONSULTA DE TRAMITES</ion-button> -->
+					</ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	
+		<ion-grid class="btn_sugerencias">
+			<ion-row>
+				<ion-col>
+					<img src="/assets/email2.png" routerLink="/consulta-buzonsugerencias" >
+				</ion-col>
+				<ion-col>
+					<ion-button class="button button-assertive button-clear" routerLink="/consulta-buzonsugerencias" routerDirection="forward">BUZON DE SUGERENCIAS</ion-button>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+		<div class="pie_menu">Plataforma Virtual de Atención</div>
+    <!-- <ion-title>Footer</ion-title> -->
+    
+  </ion-toolbar>
+</ion-footer>

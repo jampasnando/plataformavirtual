@@ -1,0 +1,91 @@
+<ion-header>	
+    <ion-buttons class="btn_cerrarmodal">
+        <ion-button (click)="cerrarModalpta()" size="large" color="light">
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-button>
+    </ion-buttons>	
+  <div class="cabecera">
+    RESULTADO DE LA BÚSQUEDA
+    
+  </div>
+</ion-header>
+<ion-content [scrollEvents]="true">
+
+<ion-item > 
+  <ion-label class="nropta">Nro de PTA: {{this.father.consultaPTA.value.pta}}</ion-label>
+</ion-item>
+<ion-item *ngIf="data.placa=='Número de placa sin infracciones pendientes!!'">
+  <ion-label text-wrap color="danger">
+    <ion-icon name="alert"></ion-icon>
+    NO SE HALLARON RESULTADOS PARA EL PTA BUSCADO
+  </ion-label>
+</ion-item>
+<!-- <ion-list *ngIf="data.status==true"> -->
+<ion-list *ngIf="data.placa!='Número de placa sin infracciones pendientes!!'">
+  <ion-list-header>
+    DATOS IDENTIFICACIÓN VEHÍCULO
+  </ion-list-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <strong>PLACA</strong><br><span>{{data.placa}}</span>
+      </ion-col>
+      <ion-col>
+          <strong>MARCA</strong><br><span>{{data.marca}}</span>
+      </ion-col>
+      <ion-col>
+          <strong>COLOR</strong><br><span>{{data.color}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-list>
+<ion-list *ngIf="data.placa!='Número de placa sin infracciones pendientes!!'">
+  <ion-list-header>DATOS INFRACCIÓN</ion-list-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <strong>FECHA</strong><br><span>{{data.fecha}}</span>
+      </ion-col>
+      <ion-col>
+        <strong>HORA</strong><br><span>{{data.hora}}</span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="opaco">
+        <ion-col>
+            <strong>ORDEN MUNICIPAL</strong><br><span>{{data.om}}</span>
+          
+        </ion-col>
+        <ion-col>
+            <strong>NRO. DE BOLETA</strong><br><span>{{data.num_boleta}}</span>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <strong>MONTO</strong><br><span>{{data.monto}}</span>
+        </ion-col>
+        <ion-col>
+            <strong>LÍNEA DE SERVICIO</strong><br><span>{{data.linea_servicio}}</span>
+        </ion-col>
+    </ion-row>
+    <ion-row class="opaco">
+        <ion-col>
+            <strong>DIRECCIÓN</strong>
+        </ion-col>
+        <ion-col>
+          <span>{{data.direccion}}</span>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <strong>DETALLE</strong>
+        </ion-col>
+        <ion-col>
+          <span>{{data.detalle}}</span>
+        </ion-col>
+    </ion-row>
+    
+    
+  </ion-grid>
+</ion-list>
+</ion-content>

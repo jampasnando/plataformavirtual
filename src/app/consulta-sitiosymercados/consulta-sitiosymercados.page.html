@@ -1,0 +1,72 @@
+<ion-header>
+  
+  <div class="logo_gmac"></div>
+  <div class="cabecera">
+    <span>
+        <ion-buttons slot="start" class="btn_volver">
+            <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+            </ion-back-button>
+        </ion-buttons>
+    </span>
+    ACTIVIDADES ECONÓMICAS
+  </div>
+</ion-header>
+<ion-content padding>	
+<ion-label color="primary-contrast" class="subtitulo_tramites">Mediante este buscador Ud. puede acceder a información de deudas por actividades económicas</ion-label><br>
+<ion-card>
+  <ion-grid class="grid_titulos">
+    <ion-row>
+      <ion-col>Tipo de Actividad</ion-col><ion-col>Código de licencia</ion-col><ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+<form [formGroup]="sitiosForm">
+  
+  <ion-grid  class="grid_formu">
+  
+    <ion-row>
+      <ion-col>
+            <ion-select formControlName="tipositio" interface="action-sheet" id="miselect" cancelText="Cancelar">
+                <ion-select-option value="0">Sitios</ion-select-option>
+                <ion-select-option value="1">Mercados</ion-select-option>
+                <ion-select-option value="2">Mercados Zonales</ion-select-option>
+                <ion-select-option value="3">Publicidad</ion-select-option>
+              </ion-select>
+        <div class="error_messages">
+            <ng-container *ngFor="let error of error_messages.tipositio">
+              <div class="error_messages" *ngIf="sitiosForm.get('tipositio').hasError(error.type) && (sitiosForm.get('tipositio').dirty || sitiosForm.get('tipositio').touched)">
+                {{error.message}}
+              </div>
+            </ng-container>
+        </div>
+      </ion-col>
+      <ion-col>
+          <ion-input type="text" formControlName="codLicencia" maxlength="18"></ion-input>
+          <div class="error_messages">
+              <ng-container *ngFor="let error of error_messages.codLicencia">
+                <div class="error_messages" *ngIf="sitiosForm.get('codLicencia').hasError(error.type) && (sitiosForm.get('codLicencia').dirty || sitiosForm.get('tipositio').touched)">
+                  {{error.message}}
+                </div>
+              </ng-container>
+            </div>
+      </ion-col>
+      <!-- <ion-button routerLink="/menu" routerDirection="back">Volver</ion-button>	 -->
+      <!-- <ion-button (click)="getTramite()" [disabled]="!consultaForm.valid || onRequest">CONSULTAR</ion-button> -->
+      <ion-col class="columna_btn_buscar">
+          <ion-button (click)="getDeuda()" expand="block" color="tertiary" class="btn_buscar">
+          <ion-icon slot="start" name="search"></ion-icon>
+          VER DEUDA
+        </ion-button>
+          <div></div>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+</form>
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+    <div class="pie_menu">Plataforma Virtual de Atención</div>
+    <!-- <ion-title>Footer</ion-title> -->
+    
+  </ion-toolbar>
+</ion-footer>

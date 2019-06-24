@@ -1,0 +1,33 @@
+<ion-header>
+
+    <div class="logo_gmac"></div>
+    <div class="cabecera">
+      <span>
+          <ion-buttons slot="start" class="btn_volver">
+              <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+              </ion-back-button>
+          </ion-buttons>
+      </span>
+      PLATAFORMA VIRTUAL DE ATENCIÓN
+      </div>
+  </ion-header>
+
+<ion-content>
+    <div class="titulodesc">
+        <span class="nrodesc">{{this.flujo+1}}</span>{{this.texto}}
+      </div>
+      <!-- <ion-slides [options]="sliderOpts">
+      <ion-slide>
+        <div class="zwiper-zoom-container"> -->
+        <ion-img [src]="this.imagen"></ion-img>
+      <!-- </div>
+    </ion-slide>
+    </ion-slides> -->
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+    <div class="pie_menu">Plataforma Virtual de Atención</div>
+    <!-- <ion-title>Footer</ion-title> -->
+    
+  </ion-toolbar>
+</ion-footer>

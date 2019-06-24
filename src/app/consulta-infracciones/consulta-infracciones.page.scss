@@ -1,0 +1,81 @@
+.error_messages{
+	font-size:0.7em;
+	color:red;
+	text-align:center;
+}
+ion-content{
+    --ion-background-color:mediumseagreen;
+}
+.card-principal{
+    margin-top: 50px !important;
+	width: 90%;
+	margin: auto;
+	background: white;
+}
+.card-principal ion-card-header{
+    background: deepskyblue;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 2px 2px gray;
+    padding: 5px 0;
+}
+
+.card-interior{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+
+}
+.card-interior ion-card-header{
+    background: white;
+    box-shadow: 0 0 0 white;
+    color: gray;
+    
+}
+.btn_buscar, .btn_buscar ion-icon{
+	font-weight: bold;
+	font-size: 2em;
+	// padding: -5px 0;
+	// line-height: 0;
+	margin: 0;
+    height: 2em;
+    
+	// background: yellow;
+}
+
+.subtitulo_tramites{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: white;
+    font-size: 1.3em;
+    
+}
+.pta{
+    // box-shadow: 2px 2px 2px lightgray;
+    background: white;
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    text-transform:uppercase;
+    border:1px solid lightgray;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn_buscar{
+    border-radius: 25px 25px;
+    width: 80%;
+    margin-top: 1.3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+.formu{
+    padding: 0;
+}
+.alert-title.sc-ion-alert-md{
+    text-align: center;
+}

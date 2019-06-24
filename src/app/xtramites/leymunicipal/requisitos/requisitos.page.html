@@ -1,0 +1,36 @@
+<ion-header>
+    
+  <div class="logo_gmac"></div>
+  <div class="cabecera">
+    <span>
+        <ion-buttons slot="start" class="btn_volver">
+            <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+            </ion-back-button>
+        </ion-buttons>
+    </span>
+    PLATAFORMA VIRTUAL DE ATENCIÓN
+  </div>
+</ion-header>
+<ion-content padding>
+  <!-- <ion-title> -->
+    <div class="titulodesc">
+      <span class="nrodesc">{{this.argumento+1}}</span>{{this.texto}}
+    </div>
+  <!-- </ion-title> -->
+  <ion-grid>
+    <ion-row *ngFor="let unafila of this.req[this.argumento];let i=index">
+      <ion-col size="1" class="oscuro" *ngIf="i%2==0">{{i+1}}</ion-col>
+      <ion-col class="oscuro" *ngIf="i%2==0"><div [innerHTML]="unafila"></div></ion-col>
+      <ion-col size="1" *ngIf="i%2!=0">{{i+1}}</ion-col>
+      <ion-col *ngIf="i%2!=0"><div [innerHTML]="unafila"></div></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <ion-label class="costo">Costo: {{this.costo}}</ion-label>
+  </ion-item>
+</ion-content>
+<ion-footer>
+    <ion-toolbar color="light-shade">
+      <div class="pie_menu">Plataforma Virtual de Atención</div>
+    </ion-toolbar>
+  </ion-footer>

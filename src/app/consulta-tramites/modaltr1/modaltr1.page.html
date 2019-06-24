@@ -1,0 +1,72 @@
+<ion-header>
+	<ion-buttons class="btn_cerrarmodal">
+			<ion-button (click)="closeModal1()" size="large" color="light">
+				<ion-icon name="close-circle"></ion-icon>
+			</ion-button>
+	</ion-buttons>	
+	<div class="cabecera">
+		RESULTADO DE LA BÚSQUEDA
+		
+	</div>
+</ion-header>
+<ion-content [scrollEvents]="true">
+
+<ion-item > 
+	<ion-label class="gestion_y_nro">Trámite nro: {{this.father.consultaForm.value.ntramite}}</ion-label>
+</ion-item>
+
+<ion-item *ngIf="data.length==0">
+	<ion-label text-wrap color="danger">
+		<ion-icon name="alert"></ion-icon>
+		NO SE HALLARON RESULTADOS PARA LOS DATOS BUSCADOS
+	</ion-label>
+</ion-item>
+<ion-list>
+	<ion-list-header>DATOS TRÁMITE</ion-list-header>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<strong>COMUNA</strong><br><span>{{data.COMUNA}}</span>
+			</ion-col>
+			<ion-col>
+				<strong>FECHA INGRESO</strong><br><span>{{data.FECHAINGRESO}}</span>
+			</ion-col>
+		</ion-row>
+		<ion-row class="opaco">
+				<ion-col>
+					<strong>GESTION TRÁMITE</strong><br>
+					<span>{{data.GESTIONTRAMITE}}</span>
+				</ion-col>
+				<ion-col>
+					<strong>FECHA SALIDA</strong><br><span></span><br>
+					<span>{{data.FECHASALIDA}}</span>
+				</ion-col>
+		</ion-row>
+		<ion-row>
+				<ion-col>
+					<strong>MENSAJE</strong><br><span></span>
+				</ion-col>
+				<ion-col>
+					<span>{{data.MENSAJE}}</span>
+				</ion-col>
+		</ion-row>
+		<ion-row class="opaco">
+				<ion-col>
+					<strong>MOTIVO</strong><br><span>{{data.MOTIVO}}</span>
+				</ion-col>
+				<ion-col>
+					<strong>NRO DE TRÁMITE</strong><br><span>{{data.NROTRAMITE}}</span>
+				</ion-col>
+		</ion-row>
+		<ion-row>
+				<ion-col>
+					<strong>UNIDAD ORIGEN</strong><br><span>{{data.UNIDADORIGEN}}</span>
+				</ion-col>
+				<ion-col>
+					<strong>UNIDAD DESTINO</strong><br><span>{{data.UNIDADDESTINO}}</span>
+				</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-list>
+</ion-content>

@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-buttons class="btn_cerrarmodal">
+        <ion-button (click)="closeModal2()" size="large" color="light">
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-button>
+    </ion-buttons>	
+  <div class="cabecera">
+    RESULTADO DE LA BÚSQUEDA
+    
+  </div>
+</ion-header>
+<ion-content [scrollEvents]="true">
+
+<ion-item > 
+  <ion-label class="gestion_y_nro">Trámite nro: {{this.father.consultaForm.value.ntramite}} de la Gestión: {{this.father.consultaForm.value.gestion}}</ion-label>
+</ion-item>
+
+<ion-item *ngIf="data.status==false">
+  <ion-label text-wrap color="danger">
+    <ion-icon name="alert"></ion-icon>
+    NO SE HALLARON RESULTADOS PARA LOS DATOS BUSCADOS
+  </ion-label>
+</ion-item>
+<ion-list *ngIf="data.status==true">
+  <ion-list-header>DATOS TRÁMITE</ion-list-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <strong>NOMBRE</strong><br><span>{{data.data.nombre}}</span>
+      </ion-col>
+      <ion-col>
+        <strong>FECHA TRAMITE</strong><br><span>{{data.data.fecha_tramite}}</span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="opaco">
+        <ion-col>
+          <strong>INSTITUCIÓN</strong><br>
+          
+        </ion-col>
+        <ion-col>
+          
+          <span>{{data.data.institucion}}</span>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <strong>ASUNTO DEL TRÁMITE</strong>
+        </ion-col>
+        <ion-col>
+          <span>{{data.data.asunto}}</span>
+        </ion-col>
+    </ion-row>
+    <ion-row class="opaco">
+        <ion-col>
+          <strong>OFICINA EMISOR</strong><br><span>{{data.data.oficina_emisor}}</span>
+        </ion-col>
+        <ion-col>
+          <strong>OFICINA RECEPTOR</strong><br><span>{{data.data.oficina_receptor}}</span>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <strong>INSTRUCCIÓN</strong><br><span>{{data.data.instruccion}}</span>
+        </ion-col>
+        <ion-col>
+          <strong>GESTION</strong><br><span>{{data.data.gestion}}</span>
+        </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-list>
+</ion-content>

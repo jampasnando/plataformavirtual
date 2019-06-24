@@ -1,0 +1,39 @@
+// ion-toolbar ion-title{
+//     background: beige;
+// }
+ion-list ion-list-header{
+    background:dimgray;
+    color: white;
+    // font-weight: bold;
+    padding: 0px 0 0 5px;
+    height: 0.9em;
+}
+.gestion_y_nro{
+    text-align: center;
+    font-style: italic;
+}
+.btn_cerrarmodal{
+    position: absolute;
+    top: 5px;
+    right: -7px;
+    
+}
+.btn_cerrarmodal ion-button{
+    color: white;
+    font-size: 1.5em;
+   
+}
+.opaco{
+    background: whitesmoke;
+}
+ion-col span{
+    font-size: 0.8em;
+    color: gray;
+}
+ion-col strong{
+    color: dimgray;
+    font-size: 0.8em;
+}
+ion-list-header{
+    font-size: 1em;
+}

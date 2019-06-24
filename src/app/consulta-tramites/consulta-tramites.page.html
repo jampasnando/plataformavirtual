@@ -1,0 +1,76 @@
+
+<ion-header>
+
+	<div class="logo_gmac"></div>
+	<div class="cabecera">
+		<span>
+			<ion-buttons slot="start" class="btn_volver">
+				<ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+				</ion-back-button>
+			</ion-buttons>
+		</span>
+		TRÁMITES
+	</div>
+</ion-header>
+<ion-content padding>	
+<ion-label color="primary-contrast" class="subtitulo_tramites">Herramienta para consulta de trámites municipales.</ion-label><br>
+<ion-card>
+	<ion-grid class="grid_titulos">
+		<ion-row>
+			<ion-col>AÑO</ion-col><ion-col>NRO. DE TRÁMITE</ion-col><ion-col>CARNET IDENTIDAD</ion-col><ion-col></ion-col>
+		</ion-row>
+	</ion-grid>
+<form [formGroup]="consultaForm">
+	
+	<ion-grid  class="grid_formu">
+	
+		<ion-row>
+			<ion-col>
+				<ion-select formControlName="gestion" interface="action-sheet">
+					<ion-select-option *ngFor="let aa of vanos;let k=index" [value]="aa">{{aa}}</ion-select-option>
+				</ion-select>
+				<div class="error_messages">
+					<ng-container *ngFor="let error of error_messages.gestion">
+						<div class="error_messages" *ngIf="consultaForm.get('gestion').hasError(error.type) && (consultaForm.get('gestion').dirty || consultaForm.get('gestion').touched)">
+							{{error.message}}
+						</div>
+					</ng-container>
+				</div>
+			</ion-col>
+			<ion-col>
+				<ion-input type="number" formControlName="ntramite" maxlength="15"></ion-input>
+				<div class="error_messages">
+					<ng-container *ngFor="let error of error_messages.ntramite">
+						<div class="error_messages" *ngIf="consultaForm.get('ntramite').hasError(error.type) && (consultaForm.get('ntramite').dirty || consultaForm.get('ntramite').touched)">
+							{{error.message}}
+						</div>
+					</ng-container>
+				</div>
+			</ion-col>
+			<ion-col>
+				<ion-input type="text" formControlName="carnet" maxlength="10" ></ion-input>
+				<div class="error_messages">
+					<ng-container *ngFor="let error of error_messages.ntramite">
+						<div class="error_messages" *ngIf="consultaForm.get('ntramite').hasError(error.type) && (consultaForm.get('ntramite').dirty || consultaForm.get('ntramite').touched)">
+							{{error.message}}
+						</div>
+					</ng-container>
+				</div>
+			</ion-col>
+			<ion-col class="columna_btn_buscar">
+					<ion-button (click)="getTramite()" expand="block" color="tertiary" class="btn_buscar">
+					<ion-icon slot="start" name="search"></ion-icon>
+					BUSCAR
+				</ion-button>
+					<div></div>
+			</ion-col>
+	</ion-row>
+</ion-grid>
+</form>
+</ion-card>
+</ion-content>
+<ion-footer>
+	<ion-toolbar color="light-shade">
+		<div class="pie_menu">Plataforma Virtual de Atención</div>
+	</ion-toolbar>
+</ion-footer>

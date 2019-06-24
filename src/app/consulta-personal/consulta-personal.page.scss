@@ -1,0 +1,25 @@
+.error_messages{
+	font-size:0.7em;
+	color:red;
+	text-align:center;
+}
+ion-content{
+    --ion-background-color:white;
+}
+
+.subtitulo_tramites{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: white;
+	font-size: 1.3em;
+}
+ion-list ion-item{
+	background:white !important;
+}
+
+ion-list{
+	background: white;
+}
+.subt{
+	color: gray;
+	font-size: 0.7em;
+}

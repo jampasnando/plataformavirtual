@@ -1,0 +1,38 @@
+ion-col{
+    border: 1px solid white;
+}
+ion-row ion-col:first-child{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+ion-row ion-col:nth-child(2){
+    text-align: justify;
+}
+.oscuro{
+    background: lightgray;
+}
+.botonmas{
+    position: fixed;
+    bottom: 3em;
+    right: 0;
+}
+.nro{
+    background:lightblue;
+    color: navy;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 0 5px 0 5px;
+    font-size: 1.3em;
+    border: 1px solid white;
+}
+.titulo{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.costo{
+    background: lightblue;
+    padding: 0.4em 3px;
+}

@@ -1,0 +1,44 @@
+.oscuro{
+    background: lightgray;
+}
+ion-grid ion-row:not(:first-child) ion-col:first-child{
+    border: 1px solid white;
+    text-align: justify;
+}
+ion-grid ion-row:not(:first-child) ion-col:not(:first-child){
+    border: 1px solid white;
+    text-align: center;
+}
+ion-grid ion-row:first-child{
+    text-align: center;
+    font-weight: bold;
+    background: lightblue;
+    color: navy;
+}
+ion-grid ion-row:first-child ion-col{
+    border: 1px solid white;
+}
+.botonmas{
+    position: fixed;
+    bottom: 3em;
+    right: 0;
+}
+.nro{
+    background:lightskyblue;
+    color: white;
+    border-radius: 50% 50%;
+    padding: 0.2em;
+    margin: 3px;
+    // font-weight: bold;
+    // border: 1px solid white;
+
+}
+ion-content{
+    text-align: center;
+}
+.hr{
+    height: 3px;
+    background:lightseagreen;
+    width: 100%;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,25 @@
+<ion-header>
+  <div class="logo_gmac"></div>
+  <div class="cabecera">
+      <ion-buttons slot="start" class="btn_volver">
+          <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+          </ion-back-button>
+      </ion-buttons>
+    PLATAFORMA VIRTUAL DE ATENCIÓN
+  </div>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <ion-item *ngFor="let item of catastro" detail [routerLink]="[item.link,item.nro,item.texto]">
+    <div class="nro">{{item.nro}}</div>
+    <ion-label>{{item.texto}}</ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light-shade">
+    <div class="pie_menu">Plataforma Virtual de Atención</div>
+    <!-- <ion-title>Footer</ion-title> -->
+    
+  </ion-toolbar>

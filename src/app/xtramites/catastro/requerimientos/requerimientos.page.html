@@ -1,0 +1,44 @@
+<ion-header>
+
+    <div class="logo_gmac"></div>
+    <div class="cabecera">
+      <span>
+          <ion-buttons slot="start" class="btn_volver">
+              <ion-back-button  text="&#8701; Volver" defaultHref="/menu">
+              </ion-back-button>
+          </ion-buttons>
+      </span>
+      PLATAFORMA VIRTUAL DE ATENCIÓN
+      </div>
+  </ion-header>
+<ion-content padding (ionScroll)="scrollFunction($event)">
+    <div class="titulodesc">
+        <span class="nrodesc">{{this.argumento+1}}</span>{{this.texto}}
+      </div>
+  <ion-grid>
+    <ion-row class="tituloscols">
+      <ion-col>REQUISITO</ion-col>
+      <ion-col>COSTO</ion-col>
+      <ion-col>VERIFICACION</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let lista of this.req[this.argumento].datos;let i=index" >
+      <ion-col *ngIf="i%2==0" class="oscuro">{{lista.requisito}}</ion-col>
+      <ion-col *ngIf="i%2==0" class="oscuro">{{lista.costo}}</ion-col>
+      <ion-col *ngIf="i%2==0" class="oscuro">{{lista.verificacion}}</ion-col>
+      <ion-col *ngIf="i%2!=0" >{{lista.requisito}}</ion-col>
+      <ion-col *ngIf="i%2!=0" >{{lista.costo}}</ion-col>
+      <ion-col *ngIf="i%2!=0" >{{lista.verificacion}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <div class="botonmas"><ion-button *ngIf="mostrar">Mas...</ion-button></div> -->
+  <div class="hr"></div>
+  <ion-button size="large" color="secondary" [routerLink]="[this.paginaflujo,this.argumento,this.texto]">FLUJOGRAMA</ion-button>
+  <!-- <div class="pideflujograma" [routerLink]="[this.paginaflujo,this.argumento,this.texto]">FLUJOGRAMA</div> -->
+</ion-content>
+<ion-footer>
+    <ion-toolbar color="light-shade">
+      <div class="pie_menu">Plataforma Virtual de Atención</div>
+      <!-- <ion-title>Footer</ion-title> -->
+      
+    </ion-toolbar>
+  </ion-footer>
